@@ -43,10 +43,43 @@
         }
         .project-images img {
             width: 100%;
-            max-width: none;
-            height: auto;
+            cursor: pointer;
             border-radius: 8px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+        .project-images img:hover {
+            transform: scale(1.05);
+        }
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+        .lightbox:target {
+            display: flex;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            font-size: 30px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
         }
         footer {
             text-align: center;
@@ -68,18 +101,18 @@
             <h2>Competitive Intelligence Dashboard [Tableau, Gephi]</h2>
             <p>Overview of the state of the market. Includes Network Graph made with Gephi that shows commonality between titles. Data is pulled from external vendor's API.</p>
             <div class="project-images">
-                <img src="Screenshots/P4S1.JPG" alt="Screenshot 5">
-                <img src="Screenshots/P4S2.JPG" alt="Screenshot 5">
-                <img src="Screenshots/P4S3.png" alt="Screenshot 5">
+                <a href="#img1"><img src="Screenshots/P4S1.JPG" alt="Screenshot 1"></a>
+                <a href="#img2"><img src="Screenshots/P4S2.JPG" alt="Screenshot 2"></a>
+                <a href="#img3"><img src="Screenshots/P4S3.png" alt="Screenshot 3"></a>
             </div>
         </div>
 
         <!-- Project 2 -->
         <div class="project">
             <h2>Online shop outage impact analysis [PowerBI]</h2>
-            <p>Analysis of fictional online shop outage meant to estimate potential loses.</p>
+            <p>Analysis of fictional online shop outage meant to estimate potential losses.</p>
             <div class="project-images">
-                <img src="Screenshots/P2S1.png" alt="Screenshot 1">
+                <a href="#img4"><img src="Screenshots/P2S1.png" alt="Screenshot 4"></a>
             </div>
         </div>
 
@@ -88,8 +121,8 @@
             <h2>Players' win streak dashboard [Tableau]</h2>
             <p>Dashboard made for stakeholders to analyze players' win streaks for in-game events planning.</p>
             <div class="project-images">
-                <img src="Screenshots/P3S1.JPG" alt="Screenshot 5">
-                <img src="Screenshots/P3S2.JPG" alt="Screenshot 5">
+                <a href="#img5"><img src="Screenshots/P3S1.JPG" alt="Screenshot 5"></a>
+                <a href="#img6"><img src="Screenshots/P3S2.JPG" alt="Screenshot 6"></a>
             </div>
         </div>
 
@@ -98,14 +131,25 @@
             <h2>In-game vehicle stats analysis [PowerBI]</h2>
             <p>This analysis was made for presentation purposes. It's meant to show potential problems in game balance. Data obtained via web scraping of public websites.</p>
             <div class="project-images">
-                <img src="Screenshots/P1S1.png" alt="Screenshot 1">
-                <img src="Screenshots/P1S2.png" alt="Screenshot 2">
-                <img src="Screenshots/P1S3.png" alt="Screenshot 3">
-                <img src="Screenshots/P1S4.png" alt="Screenshot 4">
+                <a href="#img7"><img src="Screenshots/P1S1.png" alt="Screenshot 7"></a>
+                <a href="#img8"><img src="Screenshots/P1S2.png" alt="Screenshot 8"></a>
+                <a href="#img9"><img src="Screenshots/P1S3.png" alt="Screenshot 9"></a>
+                <a href="#img10"><img src="Screenshots/P1S4.png" alt="Screenshot 10"></a>
             </div>
         </div>
-
     </div>
+
+    <!-- Lightbox Modals -->
+    <div id="img1" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img src="Screenshots/P4S1.JPG"></div>
+    <div id="img2" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img src="Screenshots/P4S2.JPG"></div>
+    <div id="img3" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img src="Screenshots/P4S3.png"></div>
+    <div id="img4" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img src="Screenshots/P2S1.png"></div>
+    <div id="img5" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img src="Screenshots/P3S1.JPG"></div>
+    <div id="img6" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img src="Screenshots/P3S2.JPG"></div>
+    <div id="img7" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img src="Screenshots/P1S1.png"></div>
+    <div id="img8" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img src="Screenshots/P1S2.png"></div>
+    <div id="img9" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img src="Screenshots/P1S3.png"></div>
+    <div id="img10" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img src="Screenshots/P1S4.png"></div>
 
     <footer>
         <p>&copy; 2025 Michał Reszka. All rights reserved.</p>
